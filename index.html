@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante Virtual de Quadrinhos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    
+    <header>
+        <h1>Nossa Estante Virtual de Quadrinhos</h1>
+        <p>Clique em um quadrinho para ler</p>
+    </header>
+
+    <main class="estante">
+        <div class="quadrinho" onclick="abrirQuadrinho('feiticeira_escarlate')">
+            <img src="imagens/feiticeira_escarlate.jpg" alt="Feiticeira Escarlate">
+            <h3>Feiticeira Escarlate</h3>
+            <p>Feiticeira Escarlate 2023 #4</p>
+        </div>
+
+        <div class="quadrinho" onclick="abrirQuadrinho('pantera_negra')">
+            <img src="imagens/Pantera_Negra.jpg" alt="Pantera Negra">
+            <h3>Pantera Negra</h3>
+            <p>Uma nação sob os pés #2</p>
+        </div>
+
+        <div class="quadrinho" onclick="abrirQuadrinho('viuva_negra')">
+            <img src="imagens/viuva_negra.jpg" alt="Viuva Negra">
+            <h3>Viúva Negra</h3>
+            <p>Ferrão da viúva #1</p>
+        </div>
+
+        <div class="quadrinho" onclick="abrirQuadrinho('thor')">
+            <img src="imagens/thor.jpg" alt="Thor">
+            <h3>Thor</h3>
+            <p>O renascer dos deuses</p>
+        </div>
+
+        <div class="quadrinho" onclick="abrirQuadrinho('homem_aranha')">
+            <img src="imagens/homem_aranha.jpg" alt="Homem Aranha">
+            <h3>Homem-Aranha</h3>
+            <p>O amigão da vizinhança #16</p>
+        </div>
+
+        <div class="quadrinho" onclick="abrirQuadrinho('hulk')">
+            <img src="imagens/hulk.jpg" alt="Hulk">
+            <h3>Hulk</h3>
+            <p>O imortal hulk #35</p>
+        </div>
+
+        <div class="quadrinho" onclick="abrirQuadrinho('capitao_america')">
+            <img src="imagens/capitao_america.jpg" alt="Capitão America">
+            <h3>Capitão América</h3>
+            <p>Simbolo da verdade #4</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Estante Virtual - Turma 203 IEMA Gonçalves Dias &copy; 2025. Projeto sem fins lucrativos.</p>
+    </footer>
+
+   
+
+    <script src="script.js"></script>
+
+     <!-- Modal para exibir os quadrinhos -->
+    <div id="quadrinho-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="quadrinho-frame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+</html>

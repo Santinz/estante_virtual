@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    transition: background-image 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body:hover .bg-overlay {
+    opacity: 1;
+}
+
+header {
+    background-image: url('https://edrodrigues.com.br/wp-content/uploads/2024/06/no-universo-marvel-todos-os-logotipos-parecem-iguais-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+}
+
+header p {
+    position: relative;
+    z-index: 2;
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.estante {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quadrinho {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.quadrinho:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.quadrinho img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.quadrinho:hover img {
+    transform: scale(1.05);
+}
+
+.quadrinho h3 {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.quadrinho p {
+    padding: 0 1rem 1rem;
+    color: #7f8c8d;
+}
+
+footer {
+    background-image: url('https://edrodrigues.com.br/wp-content/uploads/2024/06/no-universo-marvel-todos-os-logotipos-parecem-iguais-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    color: white;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+footer p {
+    position: relative;
+    z-index: 2;
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+@media (max-width: 768px) {
+    .estante {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .quadrinho {
+        width: 80%;
+    }
+}
+
+/* Adicione ao final do style.css */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    height: 90vh;
+    margin-top: 2vh;
+}
+
+#quadrinho-frame {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        height: 80vh;
+    }
+}
